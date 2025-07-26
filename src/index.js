@@ -1,2 +1,5 @@
 import './styles.css';
-console.log('Running');
+import { fetchData } from './fetchData';
+
+fetchData("lahore")
+
