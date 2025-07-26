@@ -1,5 +1,14 @@
 import './styles.css';
-import { fetchData } from './fetchData';
+import { fetchData, processData } from './weather-api';
 
-fetchData("lahore")
+const form = document.querySelector('#search-form');
+const input = document.querySelector('#search');
 
+// console.log(data)
+form.addEventListener('submit', async function (event) {
+  event.preventDefault();
+  const searchQuery = input.value;
+  const data = await fetchData(searchQuery);
+  const processedData = processData(data);
+  console.log(processedData);
+});
