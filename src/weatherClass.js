@@ -1,10 +1,10 @@
 export class WeatherReport {
-  constructor(location, desc, temp, time, feelsLike, rainProb) {
+  constructor(location, desc, temp, min, max, icon) {
     this.location = location;
     this.desc = desc;
     this.temp = temp;
-    this.time = time;
-    this.feelsLike = feelsLike;
-    this.rainProb = rainProb;
+    this.min = min;
+    this.max = max;
+    this.icon = icon;
   }
 }

@@ -10,26 +10,25 @@ const fetchData = async function (location, units = 'metric') {
 
 /**
 |--------------------------------------------------
-|  weatherReport constructor(location, desc, temp, time, feelsLike, rainProb)
+|  weatherReport constructor(location, desc, temp,min,max,icon)
 |--------------------------------------------------
 */
 
 const processData = function (weatherData) {
-  //   console.log(weatherData);
   const location = weatherData.resolvedAddress;
-  const desc = weatherData.days[0].description;
+  const desc = weatherData.days[0].conditions;
   const temp = weatherData.currentConditions.temp;
-  const time = weatherData.currentConditions.datetime;
-  const feelsLike = weatherData.currentConditions.feelslike;
-  const rainProb = weatherData.days[0].precipprob;
+  const minTemp = weatherData.days[0].tempmin;
+  const maxTemp = weatherData.days[0].tempmax;
+  const icon = weatherData.days[0].icon;
   // console.log(location,desc,temp,feelsLike,rainProb)
   const toadyWeather = new WeatherReport(
     location,
     desc,
     temp,
-    time,
-    feelsLike,
-    rainProb
+    minTemp,
+    maxTemp,
+    icon
   );
   return toadyWeather;
 };

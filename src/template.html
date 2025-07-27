@@ -7,17 +7,42 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Weather App</h1>
-    <form id="search-form">
-      <input
-        type="text"
-        id="search"
-        title="search"
-        placeholder="Enter your location"
-        minlength="1"
-        required
-      />
-      <button type="submit">Search</button>
-    </form>
+    <!-- <h1>Weather App</h1> -->
+    <div class="main-container">
+      <form id="search-form">
+        <input
+          type="text"
+          id="search"
+          title="search"
+          placeholder="Enter your location"
+          minlength="1"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div class="card">
+        <div class="container">
+          <span class="location">Lahore, Pakistan</span>
+          <span class="desc">Partly Cloudy</span>
+          <img
+            class="icon"
+            src="images/sun.png"
+            width="80px"
+            height="80px"
+            title="weather"
+          />
+          <p class="temp-main"><span class="temp">34.5</span>&deg;</p>
+          <div class="min-max-container">
+            <div class="min-container">
+              <p>Min</p>
+              <p><span class="min">32</span>&deg;</p>
+            </div>
+            <div class="max-container">
+              <p>Max</p>
+              <p><span class="max">37</span>&deg;</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
