@@ -1,5 +1,4 @@
-import clearDay from "./images/clear-day.png"
-import partlyCloudyDay from "./images/partly-cloudy-day.png"
+
 const location = document.querySelector('.location');
 const desc = document.querySelector('.desc');
 const icon = document.querySelector('.icon');
