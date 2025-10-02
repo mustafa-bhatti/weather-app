@@ -1,4 +1,4 @@
-export class WeatherReport {
+class WeatherReport {
   constructor(location, desc, temp, min, max, icon) {
     this.location = location;
     this.desc = desc;
@@ -8,3 +8,11 @@ export class WeatherReport {
     this.icon = icon;
   }
 }
+class ForecastReport {
+  constructor(day, temp, icon) {
+    this.day = day;
+    this.temp = temp;
+    this.icon = icon;
+  }
+}
+export { WeatherReport, ForecastReport };
